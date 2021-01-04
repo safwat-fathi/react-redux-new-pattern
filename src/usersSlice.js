@@ -14,9 +14,9 @@ export const usersSlice = createSlice({
     },
   },
 });
-
+// synchronous actions
 export const { addUser } = usersSlice.actions;
-
+// asynchronous actions
 export const addUserAsync = (user) => (dispatch) => {
   setTimeout(() => {
     dispatch(addUser(user));
