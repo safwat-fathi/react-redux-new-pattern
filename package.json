@@ -1,6 +1,6 @@
 {
-	"name": "redux-new-pattern",
-	"description": "react with redux new pattern tutorial from documentation",
+  "name": "redux-new-pattern",
+  "description": "react with redux new pattern tutorial from documentation",
   "version": "0.1.0",
   "private": false,
   "dependencies": {

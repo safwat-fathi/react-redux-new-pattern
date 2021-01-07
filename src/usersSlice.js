@@ -5,12 +5,12 @@ import { usersData } from "./fakeData";
 export const usersSlice = createSlice({
   name: "users",
   initialState: {
-    users: usersData,
+    usersData,
   },
   reducers: {
     addUser: (state, action) => {
       const { payload } = action;
-      state.users.push(payload);
+      state.usersData.push(payload);
     },
   },
 });
@@ -23,6 +23,6 @@ export const addUserAsync = (user) => (dispatch) => {
   }, 2000);
 };
 
-export const selectUsers = (state) => state.users;
+export const selectUsers = (state) => state.users.usersData;
 
 export default usersSlice.reducer;

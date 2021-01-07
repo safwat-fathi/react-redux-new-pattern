@@ -4,12 +4,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { addUser, addUserAsync, selectUsers } from "./usersSlice";
 
 const App = () => {
-  const { users } = useSelector(selectUsers);
+  const usersData = useSelector(selectUsers);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log(users);
-  }, [users]);
+    console.log(usersData);
+  }, [usersData]);
 
   const handleClick = (e) => {
     dispatch(
@@ -27,7 +27,7 @@ const App = () => {
     <div>
       <h1>hi</h1>
       <ul>
-        {users.map((user) => {
+        {usersData.map((user) => {
           return <li key={user.id}>{user.name}</li>;
         })}
       </ul>
